@@ -23,7 +23,7 @@ export default SectionOne
 
 const Container = styled.div`
     height: 100vh;
-    background: #282930;
+    background: #15151a;
     color: #fff;
     position: relative;
     z-index: 3;

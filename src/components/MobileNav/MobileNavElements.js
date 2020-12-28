@@ -5,7 +5,7 @@ import {Link as LinkS} from 'react-scroll'
 
 export const MobileNavContainer = styled.aside`
     position: fixed;
-    z-index: 999;
+    z-index: ${({isOpen}) => (isOpen ? '-9999' : '9999')};
     width: 100%;
     height: 100%;
     background: #0d0d0d;
@@ -16,6 +16,7 @@ export const MobileNavContainer = styled.aside`
     transition: 0.3s ease-in-out;
     opacity: ${({isOpen}) => (isOpen ? '100%' : '0')};
     top: ${({isOpen}) => (isOpen ? '0' : '-100%')};
+
 `
 
 export const CloseIcon = styled(FaTimes)`
