@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {FaTimes} from 'react-icons/fa'
 import {Link as LinkS} from 'react-scroll'
-import {Link as LinkR} from 'gatsby'
+//import {Link as LinkR} from 'gatsby'
 
 export const MobileNavContainer = styled.aside`
     position: fixed;
@@ -71,7 +71,7 @@ export const MobileMenu = styled.div`
     }
 `
 
-export const Button = styled(LinkR)`
+export const Button = styled(LinkS)`
     border-radius: 50px;
     background: #f26A2E;
     white-space: nowrap;

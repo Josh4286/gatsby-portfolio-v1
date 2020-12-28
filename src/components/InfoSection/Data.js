@@ -16,3 +16,22 @@ export const objectOne = {
     primary: true,
     darkText: false,
 }
+
+export const objectTwo = {
+    id: 'two',
+    lightBg: true,
+    lightText: false,
+    lightTextDesc: false,
+    topLine:'Section Two',
+    headline: 'Section Two Headline',
+    description: `test test test test test test test test test test test test
+    test test test test
+    test test test test`,
+    buttonLabel: 'Get started',
+    imgStart: true,
+    img: require('../../images/svg-1.svg'),
+    alt: 'Image',
+    dark: false,
+    primary: false,
+    darkText: true,
+}

@@ -44,6 +44,7 @@ const HeroContainer = styled.div`
     height: 100vh;
     padding: 0 1rem;
     position: relative;
+    max-height: 110%;
     :before{
         content: "";
         position: absolute;

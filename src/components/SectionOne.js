@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const SectionOne = () => {
     return (
-        <Container>
+        <Container id='animation'>
             <Wrapper>
                 <ColumnLeft>
                     <h1>Animation</h1>

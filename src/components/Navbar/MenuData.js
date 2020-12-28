@@ -1,5 +1,6 @@
 export const menuData = [
+    {title: "One", link: "one"},
+    {title: "Two", link: "two"},
     {title: "Animation", link: "animation"},
-    {title: "SVG", link: "svg"},
     {title: "Resume", link: "resume"},
 ]

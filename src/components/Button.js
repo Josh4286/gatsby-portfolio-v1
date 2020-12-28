@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import {Link} from 'gatsby'
+import {Link as LinkS} from 'react-scroll'
 
-export const Button = styled(Link)`
+export const Button = styled(LinkS)`
     background: ${({primary}) => (primary?'#f26A2E' : '#077BF1')};
     white-space: nowrap;
     padding: ${({big}) => (big?'16px 40px' : '10px 32px')};
