@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import ImageOne from "../assets/ImageOne.svg"
+//import ImageOne from "../assets/ImageOne.svg"
 
 const SectionOne = () => {
     return (
@@ -66,4 +66,4 @@ const ColumnRight = styled.div`
     position: relative;
 `
 
-const Image = styled.img``
+//const Image = styled.img``

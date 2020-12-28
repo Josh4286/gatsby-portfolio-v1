@@ -21,12 +21,12 @@ const Hero = () => {
                 <VideoBg src={Video} type="video/mp4" autoPlay loop muted playsInline/>
             </Herobg>
             <HeroContent style={{
-            transform: `translateY(${offset * 0.7}px)`,
+            transform: `translateY(${offset * 1}px)`,
           }}>
                 <HeroItems>
                     <HeroH1>My Portfolio</HeroH1>
                     <HeroP>See what I can do</HeroP>
-                    <Button primary="true" big="true" round="true" to="/resume">View Resume</Button>
+                    <Button primary="true" big="true" round="true" to="/">Begin</Button>
                 </HeroItems>
             </HeroContent>
         </HeroContainer>
