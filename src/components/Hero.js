@@ -36,7 +36,7 @@ const Hero = () => {
 export default Hero
 
 const HeroContainer = styled.div`
-    background: #0c0c0c;
+    background: #15151a;
     display: flex;
     justify-content: center;
     color: #fff;
