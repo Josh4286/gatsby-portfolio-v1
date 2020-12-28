@@ -11,7 +11,7 @@ const SectionOne = () => {
                     <p>Click and drag the images</p>
                 </ColumnLeft>
                 <ColumnRight>
-                    <Image src={ImageOne} alt='image'/>
+                    {/*<Image src={ImageOne} alt='image'/>*/}
                 </ColumnRight>
 
             </Wrapper>
