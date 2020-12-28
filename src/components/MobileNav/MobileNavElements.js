@@ -5,7 +5,7 @@ import {Link as LinkS} from 'react-scroll'
 
 export const MobileNavContainer = styled.aside`
     position: fixed;
-    z-index: ${({isOpen}) => (isOpen ? '-9999' : '9999')};
+    z-index: ${({isOpen}) => (isOpen ? '9999' : '-9999')};
     width: 100%;
     height: 100%;
     background: #0d0d0d;
