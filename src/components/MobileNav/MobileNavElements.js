@@ -70,6 +70,9 @@ export const MobileMenu = styled.div`
     @media screen and (max-width: 480px) {
         grid-template-rows: repeat(6,60px);
     }
+    @media screen and (max-height: 360px) {
+        grid-template-rows: repeat(5,40px);
+    }
 `
 
 export const Button = styled(LinkS)`
@@ -89,5 +92,8 @@ export const Button = styled(LinkS)`
         transition: all 0.2s ease-in-out;
         background: #fff;
         color: #f26A2E;
+    }
+    @media screen and (max-height: 360px) {
+        padding: 8px 32px;
     }
 `

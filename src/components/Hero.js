@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import { Button } from './Button'
 import Video from "../assets/videos/video.mp4"
-//import parallax from "./styles/Parallax"
 
 const Hero = () => {
     const [offset, setOffset] = useState(0)
@@ -21,7 +20,7 @@ const Hero = () => {
                 <VideoBg src={Video} type="video/mp4" autoPlay loop muted playsInline/>
             </Herobg>
             <HeroContent style={{
-            transform: `translateY(${offset * 1}px)`,
+            transform: `translateY(${offset * 0.5}px)`,
           }}>
                 <HeroItems>
                     <HeroH1>My Portfolio</HeroH1>
