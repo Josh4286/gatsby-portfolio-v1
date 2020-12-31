@@ -1,48 +1,54 @@
 import React from 'react'
 import { useRef } from "react"
 import styled from 'styled-components'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import EllipseOne from './../images/Ellipse 1.svg'
 import EllipseTwo from './../images/Ellipse 2.svg'
 import EllipseThree from './../images/Ellipse 3.svg'
 import EllipseFour from './../images/Ellipse 4.svg'
+//import { useInView } from "react-intersection-observer";
 
 const SectionOne = () => {
     const constraintsRef = useRef(null);
+
     return (
-        <Container id='animation' >
+        <Container id='animation'>
             <Wrapper>
                 <ColumnLeft>
-                    <motion.h1
-                    initial={{opacity:0}}
-                    animate={{opacity:1}}
-                    transition={{duration:1}}
-                    >Animation</motion.h1>
-                    <p>Click and drag the images</p>
-
+                    <Content>
+                        <motion.h1
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1 }}
+                        >Animation</motion.h1>
+                        <p>Click and drag the images</p>
+                    </Content>
+                    <motion.div className="container" ref={constraintsRef}>
+                        <Image src={EllipseOne} alt='ellipse'
+                            id='PictureOne'
+                            whileTap={{ scale: 0.9 }}
+                            drag={true}
+                            dragConstraints={
+                                constraintsRef
+                            }
+                            dragElastic={0.1} />
+                        <Image src={EllipseTwo} alt='ellipse'
+                            whileTap={{ scale: 0.9 }}
+                            drag={true}
+                            dragConstraints={constraintsRef}
+                            dragElastic={0.1} />
+                        <Image src={EllipseThree} alt='ellipse'
+                            whileTap={{ scale: 0.9 }}
+                            drag={true}
+                            dragConstraints={constraintsRef}
+                            dragElastic={0.1} />
+                        <Image src={EllipseFour} alt='ellipse'
+                            whileTap={{ scale: 0.9 }}
+                            drag={true}
+                            dragConstraints={constraintsRef}
+                            dragElastic={1} />
+                    </motion.div>
                 </ColumnLeft>
-                <ColumnRight>
-                    <Image src={EllipseOne} alt='ellipse'
-                    whileTap={{scale:0.9}}
-                    drag={true}
-                    dragConstraints={{left: -10, right: 150, bottom: 75}}
-                    dragElastic={0.1}/>
-                    <Image src={EllipseTwo} alt='ellipse'
-                                        whileTap={{scale:0.9}}
-                                        drag={true}
-                                        dragConstraints={{left: -200, right: -10, bottom: 10}}
-                                        dragElastic={0.1}/>
-                    <Image src={EllipseThree} alt='ellipse'
-                                        whileTap={{scale:0.9}}
-                                        drag={true}
-                                        dragConstraints={{left: 0, right: 0, bottom: 10}}
-                                        dragElastic={0.1}/>
-                    <Image src={EllipseFour} alt='ellipse'
-                                        whileTap={{scale:0.9}}
-                                        drag={true}
-                                        dragConstraints={{left: -200, right: -10, top: -500, bottom: 100}}
-                                        dragElastic={1}/>
-                </ColumnRight>
             </Wrapper>
         </Container>
     )
@@ -53,27 +59,55 @@ export default SectionOne
 const Container = styled.div`
     height: 100vh;
     min-height: 480px;
-    background: #15151a;
     color: #fff;
     position: relative;
-    z-index: 10;
-    max-width: 100vw;
+    z-index: 100;
+    max-width: 100%;
 `
 const Wrapper = styled(motion.div)`
     display: grid;
-    grid-template-columns: 1fr 1fr;
     height: 100vh;
-    padding: 3rem calc((100vw - 1300px) / 2);
+    background: #15151a;
+`
+const Content = styled(motion.div)`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    height: 100%;
+    width: 100%;
+    max-height: 100%
+    padding: 0;
+    color: #fff;
+    line-height: 1.1;
+    line-weight: bold;
+    //border:  solid red 5px;
+`
+
+const Image = styled(motion.img)`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    margin: 0px;
+    padding: 0px;
     @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
+        max-width: 170px;
+        max-height: 170px;
+    }
+    @media screen and (max-width: 420px) {
+        max-width: 100px;
+        max-height: 100px;
     }
 `
+
 const ColumnLeft = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 5rem 2rem;
 
     h1 {
         margin-bottom: 0.5rem;
@@ -86,64 +120,60 @@ const ColumnLeft = styled.div`
     }
 
     line-height: 1.1;
-`
-const Image = styled(motion.img)`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    max-width: 250px;
-    max-height: 250px;
-    margin: 0;
-    padding: 0;
-    @media screen and (max-width: 768px) {
-        max-width: 100px;
-        max-height: 100px;
+
+    .container {
+        top:  calc(-100vh - 860px - 860px);
+        width: 100%;
+        height: calc(100vh + 860px + 860px + 100vh + 860px);
+        display: flex;
+        place-content: center;
+        place-items: center;
+        overflow: hidden;
+        background: transparent;
+        border-radius: 30px;
+        position: absolute;
+        //border:  solid red 5px;
+        @media screen and (max-width: 768px) {
+            top:  calc(-100vh - 860px - 860px - 400px);
+            height: calc(100vh + 860px + 860px + 100vh + 860px + 600px);
+        }
     }
 
-`
 
-const ColumnRight = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2 rem;
-    position: relative;
-    min-height: 50px;
     ${Image}:nth-child(1){
-        top: 10px;
-        left: 10px;
-        @media screen and (max-width: 420px) {
-            top: 0px;
+        top: calc(100vh + 860px + 860px + 10vh);
+        left: calc(10vw);
+        @media screen and (max-width: 768px) {
+            top: calc(100vh + 860px + 860px + 400px + 10vh);
             left: 10px;
         }
     }
 
     ${Image}:nth-child(2){
-        bottom: 170px;
+        top: calc(100vh + 860px + 860px + 40vh);
         right: 10px;
-        @media screen and (max-width: 420px) {
-            bottom: -30px;
-            right: 0px;
+        @media screen and (max-width: 768px) {
+            top: calc(100vh + 860px + 860px + 400px + 20vh);
+            right: 10vw;
         }
     }
 
     ${Image}:nth-child(3){
-        top: 350px;
+        top: calc(100vh + 860px + 860px + 60vh);
         left: 50px;
-        @media screen and (max-width: 420px) {
-            top: 10px;
+        @media screen and (max-width: 768px) {
+            top: calc(100vh + 860px + 860px + 400px + 60vh);
             left: 100px;
         }
     }
 
     ${Image}:nth-child(4){
-        bottom: 100px;
+        top: calc(100vh + 860px + 860px + 75vh);
         right: 75px;
 
-        @media screen and (max-width: 420px) {
-            bottom: 75px;
+        @media screen and (max-width: 768px) {
+            top: calc(100vh + 860px + 860px + 400px + 75vh);
             right: 0px;
         }
     }
 `
-
