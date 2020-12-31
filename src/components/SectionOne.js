@@ -31,7 +31,7 @@ const SectionOne = () => {
                             dragConstraints={
                                 constraintsRef
                             }
-                            dragElastic={0.1} />
+                            dragElastic={0.1}/>
                         <Image src={EllipseTwo} alt='ellipse'
                             whileTap={{ scale: 0.9 }}
                             drag={true}
@@ -93,6 +93,7 @@ const Image = styled(motion.img)`
     max-height: 250px;
     margin: 0px;
     padding: 0px;
+    pointer-events: auto; 
     @media screen and (max-width: 768px) {
         max-width: 170px;
         max-height: 170px;
@@ -133,6 +134,7 @@ const ColumnLeft = styled.div`
         border-radius: 30px;
         position: absolute;
         //border:  solid red 5px;
+        pointer-events: none; 
         @media screen and (max-width: 768px) {
             top:  calc(-100vh - 860px - 860px - 400px);
             height: calc(100vh + 860px + 860px + 100vh + 860px + 600px);
