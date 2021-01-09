@@ -71,6 +71,7 @@ const FooterWrapper = styled.div`
 
     @media screen and (max-width:275px) {
         flex-direction: column;
+        flexwrap: wrap;
     }
 `
 
@@ -81,28 +82,30 @@ const LeftColumn = styled.div`
 const LeftColumnWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 16px;
     align-items: center;
-    //border: 3px solid green;
+    //border: 1px solid green;
     @media screen and (max-width:768px) {
         flex-direction: column;
+        align-items: start;
+    }
+    @media screen and (max-width:275px) {
+        align-items: center;
     }
 
 `
 const Logo = styled(LinkR)`
     display: flex;
-    align-items: center;
     text-decoration: none;
     color: #fff;
     font-size: 0.8rem;
     //border: 3px solid green;
-    min-width: 170px;
+    min-width: 180px;
     &:hover{
         color: #f26A2E;
         transition: 0.3s ease-in;
     }
     @media screen and (max-width:768px) {
-        justify-content: center;
+        justify-content: ;
         min-width: auto;
     }
 `
@@ -113,6 +116,10 @@ flex-direction: row;
 //border: 3px solid green;
 justify-content: center;
 width: 100%;
+@media screen and (max-width:768px) {
+    justify-content: start;
+    width: auto;
+}
 `
 const SocialLink = styled(LinkR)`
     font-size: 2.5rem;
@@ -122,17 +129,19 @@ const SocialLink = styled(LinkR)`
         color: #f26A2E;
         transition: 0.3s ease-in;
     }
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
 
     @media screen and (max-width:768px) {
-        margin-top: 20px;
+        margin-top: 50px;
         margin-left: 10px;
         margin-right: 10px;
     }
 `
 const RightColumn = styled.div`
-    //border: 3px solid red;
+    //border: 1px solid red;
+    @media screen and (max-width:768px) {
+    }
 `
 
 const RightFooterLinkWrapper = styled.div`

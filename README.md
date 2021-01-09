@@ -17,4 +17,4 @@ Utilise Gatsby image to display image slideshow of past work and resume
 liquid effect
 browser game? maybe in the future
 
-Website link: https://blissful-banach-f0d5ff.netlify.app/
+Website link: https://joshuawong.netlify.app/
