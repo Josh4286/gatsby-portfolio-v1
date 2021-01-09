@@ -5,12 +5,12 @@ Website Features:
 Responsiveness
 Smooth Scrolling
 Parallax Effect
+Framer Motion animation
 
 Current ideas for website:
 3D animation
 SVG text animation
 SVG image animation
-Framer Motion animation
 Text fly in animation
 Utilise Gatsby image to display image slideshow of past work and resume
 

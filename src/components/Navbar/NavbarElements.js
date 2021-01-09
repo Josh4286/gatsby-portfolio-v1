@@ -73,6 +73,10 @@ export const NavLinks = styled(LinkS)`
     padding: 0 1rem;
     cursor: pointer;
     height: 80px;
+    &:hover{
+        background: ${({scrollNav}) => (scrollNav ? '#272727' : 'transparent')};
+        transition: 0.3s ease-in;
+    }
     &.active {
         border-bottom: 3px solid #f26A2E;
     }

@@ -131,7 +131,6 @@ const ColumnLeft = styled.div`
         place-items: center;
         overflow: hidden;
         background: transparent;
-        border-radius: 30px;
         position: absolute;
         //border:  solid red 5px;
         pointer-events: none; 

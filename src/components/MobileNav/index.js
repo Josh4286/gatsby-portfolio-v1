@@ -12,7 +12,7 @@ const MobileNav = ({isOpen, toggle}) => {
             <MobileWrapper>
                 <MobileMenu>
                     {menuData.map((item, index) => (
-                        <MobileLinks onClick={toggle} to={item.link} key={index}>
+                        <MobileLinks to={item.link} key={index} smooth={true} duration={500} spy={true} exact='true' onClick={toggle} >
                             {item.title}
                         </MobileLinks>
                     ))}

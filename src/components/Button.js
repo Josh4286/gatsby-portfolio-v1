@@ -13,7 +13,7 @@ export const Button = styled(LinkS)`
     cursor: pointer;
     text-decoration: none;
     transition: 0.3s !important;
-    border-radius: ${({ round }) => (round ? '50px' : 'none')};
+    border-radius: ${({ round }) => (round ? '50px' : '10px')};
 
     &:hover{
         background: ${({primary}) => (primary?'#077BF1' : '#f26A2E')};

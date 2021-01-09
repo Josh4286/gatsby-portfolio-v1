@@ -25,7 +25,7 @@ const Hero = () => {
                 <HeroItems>
                     <HeroH1>My Portfolio</HeroH1>
                     <HeroP>See what I can do</HeroP>
-                    <Button primary="true" big="true" round="true" to="/">Begin</Button>
+                    <Button smooth={true} duration={500} spy={true} exact='true' offset={-80} primary="true" big="true" round="true" to="one">Begin</Button>
                 </HeroItems>
             </HeroContent>
         </HeroContainer>
@@ -44,6 +44,7 @@ const HeroContainer = styled.div`
     padding: 0 1rem;
     position: relative;
     max-height: 110%;
+    overflow: none;
     :before{
         content: "";
         position: absolute;

@@ -29,13 +29,13 @@ const Navbar = ({toggle}) => {
                 </MobileIcon>
                 <NavMenu>
                     {menuData.map((item, index) => (
-                        <NavLinks to={item.link} key={index} smooth={true} duration={500} spy={true} exact='true' offset={-80}>
+                        <NavLinks  scrollNav={scrollNav} to={item.link} key={index} smooth={true} duration={500} spy={true} exact='true' offset={-80}>
                             {item.title}
                         </NavLinks>
                     ))}
                 </NavMenu>
                 <NavBtn>
-                    <Button primary="true" round="true" to="resume">View Resume</Button>
+                    <Button primary="true" round="true" to="resume">Get in touch</Button>
                 </NavBtn>
             </NavbarContainer>
         </Nav>
