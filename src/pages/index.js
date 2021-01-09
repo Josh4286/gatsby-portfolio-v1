@@ -10,16 +10,18 @@ import styled from "styled-components"
 
 const IndexPage = () => {
   return (
-    <Boundary>
+    
       <Layout>
+        <Boundary>
         <SEO title="Home" />
         <Hero />
         <InfoSection {...objectOne} />
         <InfoSection {...objectTwo} />
         <SectionOne />
         <InfoSection {...objectTwo} />
+        </Boundary>
       </Layout>
-    </Boundary>
+    
   )
 }
 export default IndexPage
