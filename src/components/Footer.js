@@ -68,10 +68,14 @@ const FooterWrapper = styled.div`
     flex-direction: row;
     align-items: center;
     //border: 3px solid red;
-
+    @media screen and (max-width:768px) {
+        max-width: 60%
+    }
+    @media screen and (max-width:512px) {
+        max-width: 80%
+    }
     @media screen and (max-width:275px) {
         flex-direction: column;
-        flexwrap: wrap;
     }
 `
 
@@ -105,7 +109,10 @@ const Logo = styled(LinkR)`
         transition: 0.3s ease-in;
     }
     @media screen and (max-width:768px) {
-        justify-content: ;
+        min-width: 0;
+    }
+    @media screen and (max-width:275px) {
+        text-align: center;
         min-width: auto;
     }
 `
