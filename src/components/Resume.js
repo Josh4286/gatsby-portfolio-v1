@@ -17,10 +17,7 @@ const Container = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 80px 30px 80px 30px;
-    @media screen and (max-width: 420px) {
-        padding: 20px 10px 20px 10px;
-    }
+    padding: 100px 10px 80px 10px;
 `
 
 const ResumeContainer = styled.img`
