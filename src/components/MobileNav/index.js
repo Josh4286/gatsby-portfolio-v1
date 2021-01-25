@@ -18,7 +18,7 @@ const MobileNav = ({isOpen, toggle}) => {
                     ))}
                 </MobileMenu>
                 <MobileBtnWrap>
-                    <Button primary="true" round="true" to="resume">View Resume</Button>
+                    <Button primary="true" round="true" to="contact" smooth={true} duration={500} spy={true} exact='true' onClick={toggle}>Contact Me</Button>
                 </MobileBtnWrap>
             </MobileWrapper>
         </MobileNavContainer>

@@ -82,7 +82,7 @@ export const NavLinks = styled(LinkS)`
     }
 `
 
-export const NavBtn = styled.div`
+export const NavBtn = styled(LinkS)`
 display: flex;
 align-items: center;
 margin-right: 24px;

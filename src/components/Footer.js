@@ -21,9 +21,9 @@ const Footer = () => {
                             <SocialLink to='https://github.com/Josh4286/gatsby-portfolio-v1/'>
                                 <FaGithub />
                             </SocialLink>
-                            <SocialLink>
-                                <FaLinkedin />
-                            </SocialLink>
+                            <SocialLink to='https://www.linkedin.com/in/joshuawongcy/'>
+                                <FaLinkedin/>
+                            </SocialLink >
                         </SocialWrapper>
                     </LeftColumnWrapper>
                 </LeftColumn>
@@ -33,19 +33,19 @@ const Footer = () => {
                         <FooterLinkS
                             to="one" smooth={true} duration={500} spy={true} exact='true'>
                             About
-                </FooterLinkS>
+                        </FooterLinkS>
                         <FooterLinkS to="two" smooth={true} duration={500} spy={true} exact='true'>
                             Skills
-                </FooterLinkS>
+                        </FooterLinkS>
                         <FooterLinkS to="animation" smooth={true} duration={500} spy={true} exact='true'>
                             Animation
-                </FooterLinkS>
-                        <FooterLinkS to="one" smooth={true} duration={500} spy={true} exact='true'>
+                        </FooterLinkS>
+                        <FooterLinkS to="resume" smooth={true} duration={500} spy={true} exact='true'>
                             Resume
-                </FooterLinkS>
-                        <FooterLinkS to="one" smooth={true} duration={500} spy={true} exact='true'>
+                        </FooterLinkS>
+                        <FooterLinkS to="contact" smooth={true} duration={500} spy={true} exact='true'>
                             Contact
-                </FooterLinkS>
+                        </FooterLinkS>
                     </RightFooterLinkWrapper>
                 </RightColumn>
             </FooterWrapper>
@@ -56,7 +56,7 @@ const Footer = () => {
 export default Footer
 
 const FooterContainer = styled.div`
-    background: #15151a;
+    background: #101010;
     color: #fff;
     padding: 48px 24px;
 `
