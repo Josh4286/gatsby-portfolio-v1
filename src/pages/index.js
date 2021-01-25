@@ -7,7 +7,7 @@ import Animation from "../components/Animation"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import Resume from "../components/Resume"
-import Contact from "../components/Contact"
+//import Contact from "../components/Contact"
 
 const IndexPage = () => {
   return (
@@ -20,7 +20,7 @@ const IndexPage = () => {
         <InfoSection {...objectTwo} />
         <Animation />
         <Resume/>
-        <Contact/>
+
         </Boundary>
       </Layout>
     
