@@ -7,14 +7,4 @@ Smooth Scrolling
 Parallax Effect
 Framer Motion animation
 
-Current ideas for website:
-3D animation
-SVG text animation
-SVG image animation
-Text fly in animation
-Utilise Gatsby image to display image slideshow of past work and resume
-
-liquid effect
-browser game? maybe in the future
-
-Website link: https://joshuawong.netlify.app/
+Website link: https://joshuawongprev.netlify.app/
