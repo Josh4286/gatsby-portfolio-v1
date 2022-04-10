@@ -35,7 +35,7 @@ const Navbar = ({toggle}) => {
                     ))}
                 </NavMenu>
                 <NavBtn>
-                    <Button scrollNav={scrollNav} to='contact' smooth='true' duration={500} spy='true' exact='true' offset={-80} primary="true" round="true">Contact Me</Button>
+                    <Button href="mailto:joshuawongcy@outlook.com" scrollNav={scrollNav} to='contact' smooth='true' duration={500} spy='true' exact='true' offset={-80} primary="true" round="true">Contact Me</Button>
                 </NavBtn>
             </NavbarContainer>
         </Nav>

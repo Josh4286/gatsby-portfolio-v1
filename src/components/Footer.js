@@ -43,7 +43,7 @@ const Footer = () => {
                         <FooterLinkS to="resume" smooth={true} duration={500} spy={true} exact='true'>
                             Resume
                         </FooterLinkS>
-                        <FooterLinkS to="contact" smooth={true} duration={500} spy={true} exact='true'>
+                        <FooterLinkS  href="mailto:joshuawongcy@outlook.com" to="contact" smooth={true} duration={500} spy={true} exact='true'>
                             Contact
                         </FooterLinkS>
                     </RightFooterLinkWrapper>
